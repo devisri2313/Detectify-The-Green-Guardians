@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Report - Detectify🌿</title>
+    <style>
+        body{
+            background-image: url("images/des.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 0 !important;
+
+        }
+
+        @media print {
+            body{
+                background-image: url("images/des.jpg");
+                background-size: cover;
+                background-repeat: repeat-y;
+                background-position: center;
+            }
+        }
+        img.w-32 {
+        margin-top: 30px; /* Adjust this value to move the image further down or up */
+        }
+        .shadow_light{
+            box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+        }
+        #google_translate_element {
+        position: absolute;
+        top: 20px;  /* Adjust these values as needed */
+        right: 20px;
+        z-index: 10;  /* To ensure the element stays above others */
+        }
+
+        /* Google Translate */
+        #google_translate_element > div > span{
+        display: none;
+        }
+        #google_translate_element div {
+        transform: scale(1.1); /* Adjust the scaling as needed */
+        }
+        #google_translate_element > div{
+        color: white;
+        }
+
+        #google_translate_element select{
+        color: black;
+        }
+
+        iframe{
+        display: none !important;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="flex items-center py-8 px-10 gap-3 min-w-fit">
+        <img onclick="navigate_home()" class="print:hidden w-8 cursor-pointer" src="images/back_arrow.svg">
+        <h1 class="text-3xl min-w-fit">Report</h1>
+        <button  onclick="download_report()" class="print:hidden min-w-fit bg-[#91D74F] px-4 py-2 text-sm rounded-lg font-medium hover:ring-4 ring-[#b5f27c]">Download Report</button>
+        <div class="w-full"></div>
+        <img class="w-32" src="images/Detectify.png">
+    </nav>
+    <!-- Body -->
+    <div class="flex justify-between px-14 flex-col md:flex-row">
+        <!-- Left Part -->
+        <div class="max-w-sm p-10 pl-0">
+            <img id="original_img" src="images/.jpg">
+            <!-- Supplement Details -->
+        </div>
+        <!-- Right Part -->
+        <div class="flex flex-col gap-3 md:w-3/6">
+            <!-- Detail Box -->
+            <div class="shadow_light p-5 rounded-xl bg-white">
+                <h2  class="font-semibold mt-3">Name of the disease</h2>
+                <p id="name" class="mt-3">Leaf Blight Isariopsis Leaf Spot </p>
+                <br>
+                <a id="youtube_link" class="print:hidden text-blue-500" href="/" target="_blank">▶ Watch videos</a>
+            </div>
+
+            <div class="shadow_light p-5 rounded-xl bg-white">
+                <h2  class="font-semibold mt-3">Description of the disease</h2>
+                <p id="desc" class="mt-3">Leaf Blight Isariopsis Leaf Spot is a fungal disease that affects plants in the family Solanaceae, including tomatoes and peppers. The disease is caused by the fungus Isariopsis griseola and is characterized by the development of dark, water-soaked spots on the leaves, which can eventually turn brown and cause the leaves to wilt and die. The fungus can also infect the fruit, causing similar symptoms.</p>
+            </div>
+
+            <div class="shadow_light p-5 rounded-xl bg-white">
+                <h2  class="font-semibold mt-3">Prevention Techniques</h2>
+                <p id="prevention" class="mt-3"> There are several ways to prevent Leaf Blight Isariopsis Leaf Spot:
+                    Crop rotation: Planting tomatoes and peppers in a different location each year can help to reduce the buildup of the fungus in the soil.
+                    Sanitation: Remove and destroy any infected plant debris, as the fungus can overwinter on fallen leaves or other plant parts.
+                    Resistant varieties: Some varieties of tomatoes and peppers have been developed that are resistant to Leaf Blight Isariopsis Leaf Spot.
+                    Proper spacing: Provide enough space between plants to promote good air circulation, which can help to reduce humidity and prevent the spread of the fungus.</p>
+            </div>
+
+            <div class="shadow_light p-5 rounded-xl bg-white">
+                <h2  class="font-semibold mt-3">Recommended Steps</h2>
+                <p id="recommended_steps" class="mt-3"> ... </p>
+            </div>
+
+            <!-- Google translate button -->
+            <div class="print:hidden" id="google_translate_element"></div>
+            <!-- Google translate script -->
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+    </div>
+
+    <script>
+        function navigate_home(){
+            window.location.replace('/')
+        }
+
+        // Feed data into the elements
+
+        var data = JSON.parse(window.localStorage.getItem('data'))
+        
+        function set(id, text){
+            document.querySelector('#'+id).innerText = text
+        }
+
+        set('name', data['disease_name'])
+        set('desc', data['description'])
+        set('prevention', data['preventive_measures'])
+        set('recommended_steps', data['recommended_steps'])
+
+        //Set original image
+        document.querySelector('#original_img').src = data['original_image']
+
+
+        // Set youtube link
+        document.querySelector('#youtube_link').href = 'https://www.youtube.com/results?search_query='+data['disease_name']
+
+        // Print page
+
+        function download_report(){
+            window.print()
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Invalid Leaf Image - PlantDoc</title>
+    <style>
+        body{
+            background-image: url("images/bg.jpg");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="h-full flex justify-center items-center">
+        <!-- Card -->
+        <div class="bg-white gap-3 shadow-lg p-5  w-4/5 md:w-2/5 rounded-3xl flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-semibold">Invalid Leaf Image</h1>
+            <img clas="w-10" src="images/leaf.jpg">
+            <p>
+                The AI couldn't detect any leaf in the uploaded image.
+                Please try uploading a new image.
+            </p>
+
+            <a href="/">
+            <button class="bg-[#91D74F] px-8 py-2 rounded-lg font-medium hover:ring-4 ring-[#b5f27c]">Go Home</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

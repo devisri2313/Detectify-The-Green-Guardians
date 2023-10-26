@@ -1,0 +1,53 @@
+body{
+    background-image: url("images/newBackground.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: shrink 10s infinite alternate;
+    top: 0 !important;
+}
+
+.main{
+    background: linear-gradient(90deg, #000000 10%, rgba(86, 86, 86, 0) 50%);
+    height: -webkit-fill-available;
+}
+
+.hero_text{
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+input[type=file]{
+  display: none;
+}
+
+#preview_box{
+  display: none;
+}
+
+/* Google Translate */
+
+#google_translate_element > div > span{
+  display: none;
+}
+
+#google_translate_element > div{
+  color: white;
+}
+
+#google_translate_element select{
+  color: black;
+}
+
+iframe{
+  display: none !important;
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 150% 150%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}

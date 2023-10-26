@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Detectify🌿- Plant doctor</title>
+</head>
+<body class="h-">
+    
+    <div class="main flex justify-center md:p-5 flex-col md:flex-row">
+        <!-- Left part -->
+        <div class="h-full flex relative flex-col items-center justify-center gap-3 md:w-1/2 md:px-5 p-5">
+            <!-- Hackathon details -->
+            <div class="invisible md:visible  md:absolute top-0 left-0 ">
+            <div class="flex w-24 gap-4">
+                <!--img src="images/thinq.png" alt="cisco_logo">
+                <img src="images/FOXlab.png" alt="foxlab_logo">
+                <img src="images/nasscom.png" alt="nasscom_logo"-->
+            </div>
+              <h2 class="text-white text-xl">Hackathon</h2>
+            </div>
+            <h3 class="hero_text text-3xl text-white"><em>Farming made Easy<br><br>Green Detectives: Diagnosing Plants, Nurturing Nature<br><br>Revive, Thrive: Give Your Plants a Healthy Life. <br><br>Made with ❤️ by The Green Guardians</h3>
+            
+            <!-- Google translate script -->
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+        </div>
+
+        <!-- Right part -->
+        <div class="flex items-center justify-center">
+            <!-- Card -->
+            <div class="bg-white rounded-xl flex items-center flex-col p-8 gap-5 items-center justify-center pb-3">
+                <!-- Logo -->
+                <img src="images/Detectify.png" alt="logo" class="h-28">
+                <!-- File Upload Box -->
+                <div id="upload_box" class="flex flex-col items-center bg-slate-100 hover:bg-slate-200 rounded-xl p-10 border-2 border-slate-500 border-dashed gap-7">
+                    <img src="images/robo.jpeg" class="w-32">
+                    <p>Please upload the image of the leaf</p>
+                    <button  onclick="handle_browse_click()" class="bg-[#91D74F] px-8 py-2 rounded-lg font-medium hover:ring-4 ring-[#b5f27c]">Browse files</button>
+                    <form action="http://192.168.207.171:5000/predict" method="POST" enctype="multipart/form-data">
+                    <input type="file" accept="image/*" name="image">
+                    <select id="mySelect" name="plant_name">
+                        <option value="Apple">Apple</option>
+                        <option value="Cassava">Cassava</option>
+                        <option value="Cherry">Cherry</option>
+                        <option value="Chili">Chili</option>
+                        <option value="Coffee">Coffee</option>
+                        <option value="Corn">Corn</option>
+                        <option value="Cucumber">Cucumber</option>
+                        <option value="Guava">Guava</option>
+                        <option value="Grape">Grape</option>
+                        <option value="Jamun">Jamun</option>
+                        <option value="Lemon">Lemon</option>
+                        <option value="Mango">Mango</option>
+                        <option value="Peach">Peach</option>
+                        <option value="Pepper">Pepper</option>
+                        <option value="Pomegranate">Pomegranate</option>
+                        <option value="Potato">Potato</option>
+                        <option value="Soybean">Soybean</option>
+                        <option value="Strawberry">Strawberry</option>
+                        <option value="Sugarcane">Sugarcane</option>
+                        <option value="Tea">Tea</option>
+                        <option value="Tomato">Tomato</option>
+                        <option value="Wheat">Wheat</option>
+                    </select>
+                    </form>
+                </div>
+                <!-- File Preview Box -->
+                <div id="preview_box">
+                    <div class="flex flex-col max-w-md items-center bg-slate-100 hover:bg-slate-200 rounded-xl p-10 border-2 border-slate-500  gap-7">
+                        <img class="max-h-60" id="preview_image" src="images/robo.jpeg" class="w-full">
+                    </div>
+                    <!-- Options Bar -->
+                    <div class="p-5 space-x-3 flex justify-end">
+                        <button onclick="toggle_view()">Reupload image</button>
+                        <button id="upload_image_btn" onclick="uploadImage()" class="bg-[#91D74F] px-8 py-2 rounded-lg font-medium hover:ring-4 ring-[#b5f27c]">Scan Leaf</button>
+                    </div>
+                    
+                </div>
+                <!-- Google translate button -->
+                <div id="google_translate_element" style="position: absolute; top: 20px; right: 20px;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
