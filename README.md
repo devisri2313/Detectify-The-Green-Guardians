@@ -7,7 +7,6 @@ Detectify is a web application developed to assist farmers in plant disease dete
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
-- [Usage](#usage)
 - [Language Support](#language-support)
 - [Resources](#resources)
 - [Download Reports](#download-reports)
@@ -48,10 +47,6 @@ Detectify is designed to help farmers by providing a user-friendly interface for
 - Dataset: Plant Village
 - Web Framework: HTML, CSS
 - Mobile Compatibility: Yes
-
-## Usage
-
-Explain how to use Detectify. Provide clear instructions on how farmers and users can take advantage of its features. Include any specific usage examples or code snippets if applicable.
 
 ## Language Support
 
