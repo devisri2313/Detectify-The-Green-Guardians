@@ -11,8 +11,6 @@ Detectify is a web application developed to assist farmers in plant disease dete
 - [Language Support](#language-support)
 - [Resources](#resources)
 - [Download Reports](#download-reports)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
