@@ -43,7 +43,6 @@ Detectify is designed to help farmers by providing a user-friendly interface for
 
 ## Technology Stack
 
-- Deep Learning Model: GoogleNet Inception V3
 - Dataset: Plant Village
 - Web Framework: HTML, CSS
 - Mobile Compatibility: Yes
