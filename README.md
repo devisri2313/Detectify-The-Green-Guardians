@@ -18,27 +18,27 @@ Detectify is designed to help farmers by providing a user-friendly interface for
 ## Features
 
 ### Home Page
-![Home Page](/images/fig1.png)
+![Home Page](images/fig1.png)
 - The main landing page of the web app.
 
 ### Uploading Leaf Photo
-![Upload Leaf Photo](/images/fig2.png)
+![Upload Leaf Photo](images/fig2.png)
 - Users can upload images of plant leaves for disease identification.
 
 ### Results
-![Results](/images/fig3.png)
+![Results](images/fig3.png)
 - Users receive results showing whether the plant is healthy or diseased, along with relevant details.
 
 ### Language Support
-![Language Support](/images/fig4.png)
+![Language Support](images/fig4.png)
 - Users can switch between languages to make the app accessible to a wider audience.
 
 ### Resources
-![Resources](/images/fig5.png)
+![Resources](images/fig5.png)
 - The app provides links to informative YouTube videos for further assistance and knowledge.
 
 ### Download Reports
-![Download Reports](/images/fig6.png)
+![Download Reports](images/fig6.png)
 - Users can download detailed reports about the plant's health status.
 
 ## Technology Stack
